@@ -6,7 +6,7 @@ const print = (err, contents) => {
 const opA = (cb) => {
   setTimeout(() => {
     cb(null, 'A')
-  }, 500)
+  }, 125)
 }
 
 const opB = (cb) => {
@@ -18,6 +18,9 @@ const opB = (cb) => {
 const opC = (cb) => {
   setTimeout(() => {
     cb(null, 'C')
-  }, 125)
+  }, 500)
 }
 
+opA(print);
+opB(print);
+opC(print);
